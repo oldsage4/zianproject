@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+     <title>Responsive Navigation Menu Bar</title>
+
+    <style>
+        /* Add your custom styles here */
+        .slider {
+            /* Your slideshow styles go here */
+        }
+
+        
+      .container {
+           max-width: 1170px;
+           margin: auto;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer {
+            background-color: rgb(31, 29, 29);
+            padding: 80px 0;
+        }
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #d3d3d3;
+            text-decoration: none;
+            font-weight: 300;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50px;
+            color: blue;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+        @media (max-width: 757px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 574px) {
+            .footer-col{
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .footer-col li{
+            list-style: none;
+        }
+        .footer-col li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col h1{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-top: 63px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .text-mid{
+           
+            margin-bottom: 20px; /* Adjust this margin */
+            margin-right: 81px;
+            margin-top: 40px; /* Adjust this margin */
+        }
+        h2{
+            font-weight: 600;
+            text-transform: capitalize;
+            line-height: 23px;
+            margin-left: 0;
+            margin-bottom: -35;
+        }
+        .header-text p {
+    color: white;}
+    
+    /* Existing styles */
+
+    /* Add this CSS to make text smaller and justified */
+    .card-body p,
+    .card-body span {
+        font-size: 14px; /* Adjust the font size as needed */
+        text-align: justify;
+    }
+
+    /* Additional styles for h1 and h2 */
+    h1 {
+        font-size: 24px; /* Adjust the font size as needed */
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust the font size as needed */
+    }
+    .header-text p {
+    color: black
+}
+    /* Add this CSS to shift the entire section up */
+   
+.card {
+    padding-top: 40px; /* Adjust the padding-top value as needed */
+}
+/* Media query for screens with a maximum width of 600px (adjust the value as needed) */
+@media (max-width: 600px) {
+    .slider {
+        margin-top: -50px; /* Adjust the value as needed */
+    }
+
+    .slider .slide {
+        background-size: contain; /* Use 'contain' to fit the entire image within the container */
+        text-align: center;
+        justify-content: center;
+        margin-top: -50px; /* Adjust the value as needed */
+    }
+
+    .slider .slide:nth-child(1),
+    .slider .slide:nth-child(2),
+    .slider .slide:nth-child(3),
+    .slider .slide:nth-child(4),
+    .slider .slide:nth-child(5) {
+        background-size: contain; /* Use 'contain' to fit the entire image within the container */
+        margin-top: -50px; /* Adjust the value as needed */
+    }
+
+    /* Move the "Why Us" section up to touch the slideshow */
+    .vh-100 {
+        margin-top: -220px; /* Adjust the value as needed */
+    }
+
+    /* You may need to adjust other elements' margins or paddings in your layout */
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+    @media screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+  body {
+    font-size: 1rem;
+   
+}
+header {
+    font-size: 0.9rem;
+}
+section {
+    font-size: 0.9em;
+    text-align: justify;
+}
+footer {
+    font-size: 0.9rem;
+    
+}
+
+    
+</style>
+
+   
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><img src="2D on transparent background.png" width="125"></span>
+
+            <div class="menu">
+                <div class="logo-toggle"><img src="2D on transparent background.png" width="125">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="jobseekers.html">Job Seeker</a></li>
+                    <li><a href="employer.html">Recruitment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+    
+
+    
+    <section class="vh-100" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-9 col-xl-7">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+                    <div class="header-text">
+                        
+                     <h1>WELCOME TO ZIAN RECRUITMENT <br>AND CONSULTANCY AGENCY LIMITED</h1>
+                     <p>Unlock the Power of Human Capital: Pioneering the realms of job recruitment in Kenya, we stand as the premier agency with an unparalleled gateway to a diverse spectrum of opportunities both overseas and within the enchanting landscapes of the Middle East including Qatar, Dubai, Israel, Jordan, Egypt, Morocco, Baharain, Cyrus, Greece, Sweden, Finland, Canada, Georgia, Portugal, Hungary & Turkey</p>
+                   </div>
+                   <a href="employer.html" class="btn">Employer</a>
+                   <a href="jobseekers.html" class="btn">Job Seekers</a>
+                 </div>
+               </div>
+           </div>
+      
+                  <div class="text-center mb-4 pb-2">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-quotes/bulb.webp"
+                      alt="Bulb" width="100">
+                  </div>
+      
+                  <figure class="text-center mb-0">
+                    <blockquote class="blockquote">
+                      <p class="pb-3">
+                        
+                        
+                         <h1>WHY US</h1>
+                        <span class="lead font-italic"><br>Embark on a journey with our comprehensive services. When it comes to visa applications, our dedicated team ensures a hassle-free process, guiding you through the complexities. <br><br> We also excel in scholarship applications, helping you secure funding for your academic journey. Moreover, our university placement services connect you with the right institutions, aligning your goals with top-notch education. <br><br> <br>With a proven track record of success, we stand as the premier choice for those seeking personalized, efficient, and reliable services in visa, scholarships, and university placements. Count on us for your brighter future.</span>
+                        
+                      </p>
+                      <h1><br><br>Company Background</h1>
+                      <span class="lead font-italic"><br>Zian Recruitment and Consultancy Agency Limited, founded on July 7th, 2023, by Pondi Collins and Zian Shito, specializes in recruitment and consultation services. Our core mission is to provide real-time assistance in securing employment opportunities.
+
+                        <br><br> Committed to combatting unemployment, we facilitate access to diverse job services and openings, thereby stimulating economic growth and reducing joblessness rates. 
+                        
+                       <br><br> Our dedication extends to empowering individuals, regardless of age or gender, not only by offering job opportunities but also by equipping them with valuable self-employment skills.
+                        
+                       <br><br> We envision a future where everyone enjoys access to personal and professional growth opportunities.
+                        
+                        At Zian Recruitment and Consultancy Agency Limited, we transcend traditional recruitment norms. We are firm believers in nurturing enduring relationships between employers and employees, fostering mutually beneficial partnerships.
+                        
+                       <br><br> Our approach incorporates innovative recruitment strategies, underpinned by unwavering integrity, ethics, and transparency. We aspire to serve as the bridge connecting talented individuals with organizations in need, ultimately contributing to a more prosperous and thriving society.
+                        
+                        <br><br> With our passionate team and unwavering commitment to excellence, we are resolutely dedicated to shaping a brighter future for both job seekers and employers.
+                        <br><br><br><br><h1>What makes Us <br>Stand Out</h1>  
+                        <br><br> Our Talent Sourcing & Recruitment Consultants work in a specialised business sector, on a limited number of projects in the pursuit of the very best people.
+
+                        <br><br> All Senior Consultants specialise in their respective business sectors, enabling you to get the most up-to-date advice on prevailing salaries, experience and cultural fit within your organisation and market sector, be it South Africa, East Africa or Kenya!
+                        
+                        <br><br> We do not want to make promises we can’t keep, but we do promise to transparently search or recruit for the best talent available in any given market and keep you informed every step of the way. <br><br> Zian offers a different approach to Executive Search and Recruitment. Why? We actually care about our clients and our candidates. And because of this, both our candidates and clients come back to us time and time again. Read our testimonials on the other page to find out more about us!
+                      </span>
+                      
+                      <br><br><br>
+                      
+                      
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+    <div>
+        <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="conferece room 4.avif" alt="" style="width: 370px; height: 250px;">
+          </div>
+          <div class="about-col-">
+            <h1 class="sub-title">Overview</h1>
+            <h8 style="color: black;">Zian Recruitment and Consultancy Agency Limited is a Human Resource recruitment agency, a human resource man power, a career consultation and a profession/ expatriate service company that aims at improving life standards through securing, advertising, providing, arranging and assisting our clients get better jobs and professionals/experts both locally in Kenya and abroad. <br><br> Zian Recruitment and Consultancy Agency Limited has the potential to create employment both in permanent and contractual terms.</h8>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="services">
+      <div class="container">
+        <div class="row">
+          <div class="service-col-1">
+            <img src="electrician 2.avif" alt="" style="width: 370px; height: 250px;">
+          </div>
+          <div class="service-col-2">
+            <h1 class="sub-title">Some of the abroad jobs we offer</h1>
+            <p><!-- Services Section -->
+              <div id="services">
+                <div class="container">
+                  <div class="row">
+                    <div class="service-col">
+                      <ul class="service-list">
+                        <li>Mecanical Engeneering</li>
+                        <li>Security Guards</li>
+                        <li>Cashiers & Salesmen</li>
+                        <li>Hospitality</li>
+                        <li>Cleaners</li>
+                        <li>Managers</li>
+                        <li>Agricultural Industries (Farm Worker)</li>
+                      </ul>
+                    </div>
+                    <div class="service-col">
+                      <ul class="service-list">
+                        <li>Accountants</li>
+                        <li>Drivers</li>
+                        <li>Fuel Pump Attendants</li>
+                        <li>Airport Attendants</li>
+                        <li>Teaching Opportunities</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End Services Section -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--contact us-->
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Career</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Affiliate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Popular Jobs</h4>
+                    <ul>
+                        <li><a href="">Accountants</a></li>
+                        <li><a href="">Hospitality</a></li>
+                        <li><a href="">Managers</a></li>
+                        <li><a href="">Security Guards</a></li>
+                        <li><a href="">Drivers</a></li>
+                        <li><a href="">Airport Attendants</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Location</h4>
+                    <ul>
+                        <li><a href="">Mombasa</a></li>
+                        <li><a href="">Nyali</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <p>0716078596</p><br>
+                    <p>zianagency@gmail.com</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100094303042295"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/+254113815796"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-mid">
+            Join us today
+            <ul>
+                <li><img src="2D on transparent background.png" width="140" alt="Logo"></li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+     <!--contact-->
+     
+    
+    <script src="js/Script.js"></script>
+
+
+    <!-- More sections or content here -->
+
+    <script>
+        const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+    </script>
+</body>
+</html>

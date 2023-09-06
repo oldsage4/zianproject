@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+     <title>Responsive Navigation Menu Bar</title>
+</head>
+<style>
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, #2c7bfe 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+  }
+  p {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  .icon-wrapper {
+    background-color: #2c7bfe;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+  }
+  .card:hover {
+    background-position: 0 100%;
+  }
+  .card:hover .icon-wrapper {
+    background-color: #ffffff;
+    color: #2c7bfe;
+  }
+  .card:hover h3 {
+    color: #ffffff;
+  }
+  .card:hover p {
+    color: #f0f0f0;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 0 2em;
+    }
+    .column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em 3em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+  .btn-primary {
+    background-color: blue; /* Set the background color to black */
+    color: white; /* Set the text color to white */
+    border: none; /* Remove any border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+.footer {
+            background-color: rgb(31, 29, 29);
+            padding: 80px 0;
+        }
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #d3d3d3;
+            text-decoration: none;
+            font-weight: 300;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50px;
+            color: blue;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+        @media (max-width: 757px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 574px) {
+            .footer-col{
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .footer-col li{
+            list-style: none;
+        }
+        .footer-col li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col h1{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-top: 63px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .text-mid{
+            text-align: right;
+            margin-bottom: 20px; /* Adjust this margin */
+            margin-right: 81px;
+            margin-top: 40px; /* Adjust this margin */
+        }
+        h2{
+            font-weight: 600;
+            text-transform: capitalize;
+            line-height: 23px;
+            margin-left: 0;
+            margin-bottom: -35;
+        }
+    
+</style>
+
+<body>
+    <div></div>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><img src="2D on transparent background.png" width="125"></a></span>
+
+            <div class="menu">
+                <div class="logo-toggle"><img src="2D on transparent background.png" width="125">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="jobseekers.html">Job Seeker</a></li>
+                    <li><a href="employer.html">Employer</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <br><br><br><br><br><br>
+        <div class="row">
+          <h2 class="section-heading">Explore the Job Market!</h2>
+        </div>
+        <br>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-hammer"></i>
+              </div>
+              <h3>Steel Structure Assembler</h3>
+              <p>
+                  € 3780 Per Month <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                  <i class="fa-solid fa-prescription-bottle-medical"></i>
+              </div>
+              <h3>Assistant Pharmacis</h3>
+              <p>
+                € 3800 Per Month <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                  <i class="fa-sharp fa-solid fa-warehouse"></i>
+              </div>
+              <h3>Warehouse Worker</h3>
+              <p>
+                € 2850 Per Month <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                  <i class="fa-solid fa-lock"></i>
+              </div>
+              <h3>Lock Smith</h3>
+              <p>
+                € 3150 Per Month <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                  <i class="fa-sharp fa-solid fa-user-police"></i>
+              </div>
+              <h3>Security Officers</h3>
+              <p>
+                € 3130 Per Month <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                  <i class="fa-sharp fa-solid fa-forklift"></i>
+              </div>
+              <h3>Forklift Operator</h3>
+              <p>
+                € 3550 Per Month
+                <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fa-solid fa-user-nurse-hair"></i>
+                </div>
+                <h3>Nurse</h3>
+                <p>
+                  5490 Per Month
+                  <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+                  
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <h3>Cashier</h3>
+                <p>
+                  € 3100 Per Month <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fa-sharp fa-solid fa-user-police"></i>
+                </div>
+                <h3>Receptionist</h3>
+                <p>
+                  € 3130 Per Month
+                  <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fas fa-truck-pickup"></i>
+                </div>
+                <h3>Truck Driver</h3>
+                <p>
+                  € 3700 Per Month
+                  <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                    <i class="fa-sharp fa-solid fa-user-police"></i>
+                </div>
+                <h3>Courier</h3>
+                <p>
+                  € 2900 Per Month
+                  <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fa-solid fa-engine"></i>
+                </div>
+                <h3>Mechanical Engineer</h3>
+                <p>
+                  € 6402 Per Month
+                  <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fas fa-nurseAW"></i>
+                </div>
+                <h3>Caregiver</h3>
+                <p>
+                  € 2809 Per Month
+                  <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fas fa-gear"></i>
+                </div>
+                <h3>System Administrator</h3>
+                <p>€ 4200 Per Month</p>
+                <a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+  
+  
+  
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="icon-wrapper">
+                  <i class="fas fa-broom"></i>
+                </div>
+                <h3>Cleaner</h3>
+                <p>
+                  € 1870 Per Month <br><a href="mailto:yourname@gmail.com" class="btn btn-primary">Apply</a>
+                </p>
+              </div>
+            </div>
+        </div>
+        <a href="index.html" class="btn btn-primary">Home</a>
+      </section>
+
+      
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+</script>
+
+
+</body>
+</html>

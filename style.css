@@ -1,0 +1,900 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+
+
+/* ===== Colours ===== */
+:root{
+  --body-color: #E4E9F7;
+  --nav-color: #4070F4;
+  --side-nav: #010718;
+  --text-color: #FFF;
+  --search-bar: #F2F2F2;
+  --search-text: #010718;
+}
+
+
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+}
+
+body.dark nav{
+    border: 1px solid #393838;
+
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen{
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu .logo-toggle{
+    display: none;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+
+.nav-bar .darkLight-searchBox{
+    display: flex;
+    align-items: center;
+}
+
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.dark-light i,
+.searchToggle i{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle i.cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle.active i.cancel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.searchToggle.active i.search{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchBox{
+    position: relative;
+}
+
+.searchBox .search-field{
+    position: absolute;
+    bottom: -85px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.searchToggle.active ~ .search-field{
+    bottom: -74px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-field::before{
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: -4px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--nav-color);
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.search-field input{
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--search-text);
+    background-color: var(--search-bar);
+}
+
+body.dark .search-field input{
+    color: var(--text-color);
+}
+
+.search-field i{
+    position: absolute;
+    color: var(--nav-color);
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+body.dark .search-field i{
+    color: var(--text-color);
+}
+
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    nav.active .menu{
+        left: -0%;
+    }
+
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu .logo-toggle{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
+}
+body {
+    margin: 0;
+  }
+  
+  .slider {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 10s infinite;
+     background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* Use 'contain' to fit the entire image within the container */
+  text-align: center;
+  justify-content: center;
+  }
+  
+  .slider .slide:nth-child(1) {
+    background-image: url(slide\ 7.jpg);
+    animation-delay: -0;
+  }
+  
+  .slider .slide:nth-child(2) {
+    background-image: url(SLIDE\ 2.jpg);
+    animation-delay: -2s;
+  }
+    
+  .slider .slide:nth-child(3) {
+    background-image: url(slide\ one.jpg);
+    animation-delay: -4s;
+  }
+    
+  .slider .slide:nth-child(4) {
+    background-image: url(slide\ 6.jpg);
+    animation-delay: -6s;
+  }
+  
+  .slider .slide:nth-child(5) {
+    background-image: url(slide\ 5.jpg);
+    animation-delay: -8s;
+  }
+  
+  @keyframes slide {
+    0%, 15%, 100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    20% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    95% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+  }
+ 
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set width to 100% for responsiveness */
+    height: 100vh; /* Set height to 100vh to cover the entire viewport height */
+    background-size: cover;
+    background-position: center;
+    animation: slide 10s infinite;
+}
+
+
+
+/* Media query for screens with a maximum width of 400px */
+@media (max-width: 300px) {
+    .slider .slide {
+        width: 100%;
+        height: auto;
+    }
+
+    section.vh-100 {
+        padding: 20px; /* Add some padding to the sections for better spacing on smaller screens */
+    }
+
+    .container.py-5.h-100 {
+        padding: 20px; /* Add padding to the container within sections */
+    }
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Media query for screens with a maximum width of 600px (adjust the value as needed) */
+@media (max-width: 600px) {
+    .slider {
+        margin-top: -50px; /* Adjust the value as needed */
+    }
+
+    .slider .slide {
+        background-size: contain; /* Use 'contain' to fit the entire image within the container */
+        text-align: center;
+        justify-content: center;
+        margin-top: -50px; /* Adjust the value as needed */
+    }
+
+    .slider .slide:nth-child(1),
+    .slider .slide:nth-child(2),
+    .slider .slide:nth-child(3),
+    .slider .slide:nth-child(4),
+    .slider .slide:nth-child(5) {
+        background-size: contain; /* Use 'contain' to fit the entire image within the container */
+        margin-top: -50px; /* Adjust the value as needed */
+    }
+
+    /* Move the "Why Us" section up to touch the slideshow */
+    .vh-100 {
+        margin-top: -200px; /* Adjust the value as needed */
+    }
+
+    /* You may need to adjust other elements' margins or paddings in your layout */
+}
+
+
+/* Reset default styles and add general styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: white;
+    color: black; /* Changed text color for better visibility */
+  }
+  
+  /* Apply styles to the menu bar */
+  .menu-bar {
+    position: fixed; /* Fixed position at the top */
+    top: 0; /* Stick to the top */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0px 0;
+    z-index: 1000; /* Ensure it's on top of other elements */
+  }
+  
+  .menu-bar img {
+    width: 140px;
+    margin-right: 20px;
+  }
+  
+  #sidemenu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #sidemenu li {
+    font-size: 18px;
+  }
+  
+  #sidemenu a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  #sidemenu a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-bar i {
+    font-size: 20px;
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .menu-bar i:hover {
+    color: blue;
+  }
+  
+  /* Header styling */
+  #header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('dubai-city-burj-khalifa-skyline-silhouette-cityscape-dusk-3840x2560-5904.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 70px; /* Add padding to make space for the fixed menu bar */
+    box-sizing: border-box; /* Include padding in the height calculation */
+  }
+  
+  .container {
+    padding: 10px 10%;
+  }
+  
+  /* ... (rest of your existing CSS code) */
+  
+  /* ... (your existing CSS code) */
+  
+  /* Apply styles to the menu bar */
+  .menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  .menu-bar img {
+    width: 140px;
+    margin-right: 20px;
+  }
+  
+  #sidemenu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #sidemenu li {
+    font-size: 18px;
+  }
+  
+  #sidemenu a {
+    color: gray;
+    text-decoration: none;
+  }
+  
+  #sidemenu a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-bar i {
+    font-size: 20px;
+    color: #0096FF;
+    transition: color 0.3s;
+    margin-right: 10px; /* Adjust the margin to move it closer */
+  }
+  
+  .menu-bar i:hover {
+    color: blue;
+  }
+  
+  /* ... (rest of your existing CSS code) */
+  
+  /* Header styling */
+  #header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('dubai-city-burj-khalifa-skyline-silhouette-cityscape-dusk-3840x2560-5904.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    padding: 10px 10%;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+  
+  nav ul li a {
+    color: gray;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: blue;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    transform: scaleX(0); /* Added to create the hover animation */
+    transform-origin: right;
+  }
+  
+  nav ul li a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Apply styles to the navigation icons */
+  nav i {
+    color: #0096FF; /* Default color */
+    font-size: 20px; /* Adjust the font size */
+    margin-left: 15px; /* Add some spacing between icons */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  /* Apply hovering effect */
+  nav i:hover {
+    color: #0096FF; /* Change color on hover */
+  }
+  
+  .header-text {
+    margin-top: 10%;
+    font-size: 16px;
+  }
+  
+  .header-text h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: #0096FF;
+  }
+  
+  p {
+    color: rgb(0, 110, 255);
+  }
+  
+  .btn {
+    display: inline-block;
+    margin: 50px auto;
+    padding: 14px 50px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    text-decoration: none;
+    color: blue;
+    transition: background 0.5s, color 0.5s; /* Added color transition */
+    background-color: transparent; /* Added initial background color */
+  }
+  
+  .btn:hover {
+    background-color: blue;
+    color: white; /* Adjusted text color on hover */
+  }
+  
+  .btn-space {
+    display: inline-block;
+    width: 40px; /* Adjust the width to control the space */
+  }
+  
+  /* --------------------About-------------- */
+  #about {
+    padding: 80px 0;
+    color: #0096FF;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .about-col-1 {
+    flex-basis: 35%;
+  }
+  
+  .about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.5s;
+  }
+  
+  .about-col-1:hover img {
+    transform: scale(1.1);
+  }
+  
+  .about-col-2 {
+    flex-basis: 60%;
+  }
+  
+  .about-col-2 p {
+    color: gray; /* Set the text color to white */
+    text-decoration-color: black;
+  }
+  
+  /* --------------------services-------------- */
+  #services {
+    padding: 80px 0;
+    color: #abababab;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .service-col-1 {
+    flex-basis: 35%;
+  }
+  
+  .service-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.5s;
+  }
+  
+  .service-col-1:hover img {
+    transform: scale(1.1);
+  }
+  
+  .service-col-2 {
+    flex-basis: 60%;
+  }
+  
+  .service-col-2 p {
+    color: grey;
+  }
+  
+  /* ... (your existing CSS code) */
+  
+  #services {
+    padding: 80px 0;
+    background-color: #f2f2f2; /* Set the background color to grey */
+    color: #abababab;
+  }
+  
+  /* ... (rest of your existing CSS code) */
+  
+  /* ... (your existing CSS code) */
+  
+  #services {
+    padding: 80px 0;
+    background-color: #f2f2f2;
+    color: #0096FF;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .service-col {
+    flex-basis: calc(50% - 20px); /* Two columns with spacing in between */
+    margin-bottom: 30px;
+  }
+  
+  .service-list {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  .service-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .service-list li::before {
+    content: "✔"; /* Verification tick symbol */
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-size: 20px;
+    color: green; /* Verification tick color */
+  }
+  
+  
+  /*<!--contact us-->*/
+  
+  /*---------footer------------/
+  .container {
+           max-width: 1170px;
+           margin: auto;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer {
+            background-color: rgb(31, 29, 29);
+            padding: 80px 0;
+        }
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #d3d3d3;
+            text-decoration: none;
+            font-weight: 300;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50px;
+            color: blue;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+        @media (max-width: 757px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 574px) {
+            .footer-col{
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .footer-col li{
+            list-style: none;
+        }
+        .footer-col li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col h1{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-top: 63px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .text-mid{
+            text-align: right;
+            margin-bottom: 20px; /* Adjust this margin */
+            margin-right: 81px;
+            margin-top: 40px; /* Adjust this margin */}
+        h2{
+            font-weight: 600;
+            text-transform: capitalize;
+            line-height: 23px;
+            margin-left: 0;
+            margin-bottom: -35;
+        }
+        
+  
+

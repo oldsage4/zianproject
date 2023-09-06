@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+     <title>Responsive Navigation Menu Bar</title>
+</head>
+
+<style>
+
+.contact_us * {
+  font-family: Nunito, sans-serif;
+}
+
+.contact_us .text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.contact_us .responsive-cell-block {
+  min-height: 75px;
+}
+
+.contact_us input:focus {
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+}
+
+.contact_us .container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: block;
+}
+
+.contact_us .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.contact_us .responsive-container-block.big-container {
+  background-color: #03a9f4;
+  position: static;
+  height: auto;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+}
+
+.contact_us .responsive-container-block.container {
+  position: static;
+  min-height: 75px;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  background-color: #87CEFA;
+}
+
+.contact_us .container-block.form-wrapper {
+  background-color: white;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-top: 90px;
+  padding-right: 40px;
+  padding-bottom: 75px;
+  padding-left: 40px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-bottom: 100px;
+  margin-left: auto;
+}
+
+.contact_us .text-blk.contactus-head {
+  font-size: 38px;
+  line-height: 52px;
+  font-weight: 900;
+}
+
+.contact_us .text-blk.contactus-subhead {
+  color: #9c9c9c;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+}
+
+.contact_us .responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12 {
+  min-height: 50px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 55px;
+  margin-left: 0px;
+}
+
+.contact_us .input {
+  width: 96%;
+  height: 48px;
+  padding-top: 1px;
+  padding-right: 15px;
+  padding-bottom: 1px;
+  padding-left: 15px;
+  font-size: 16px;
+  color: black;
+  border-top-width: initial;
+  border-right-width: initial;
+  border-bottom-width: 3px;
+  border-left-width: initial;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-bottom-color: #d8d7d7;
+  border-left-color: initial;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+}
+
+.contact_us .textinput {
+  width: 98%;
+  min-height: 220px;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #eeeeee;
+  border-right-color: #eeeeee;
+  border-bottom-color: #eeeeee;
+  border-left-color: #eeeeee;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  font-size: 16px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #f1f2f3;
+}
+
+.contact_us .submit-btn {
+  width: auto;
+  background-color: #87CEFA;
+  height: 58px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: outset;
+  border-right-style: outset;
+  border-bottom-style: outset;
+  border-left-style: outset;
+  border-top-color: #767676;
+  border-right-color: #767676;
+  border-bottom-color: #767676;
+  border-left-color: #767676;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  padding-top: 1px;
+  padding-right: 60px;
+  padding-bottom: 1px;
+  padding-left: 60px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  cursor: pointer;
+}
+
+.contact_us .form-box {
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 80px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.contact_us .text-blk.input-title {
+  text-align: left;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  font-size: 19px;
+  color: black;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+
+.contact_us ::placeholder {
+  color: #b4b4b4;
+}
+
+.contact_us .text-blk.contact-head {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 700;
+  color: white;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+
+.contact_us .text-blk.contact-subhead {
+  max-width: 670px;
+  font-size: 20px;
+  line-height: 27px;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .contact_us .responsive-container-block.container {
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+  }
+
+  .contact_us .container-block.form-wrapper {
+    margin-top: 60px;
+    margin-right: 0px;
+    margin-bottom: 80px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact_us .submit-btn {
+    width: 100%;
+  }
+
+  .contact_us .input {
+    width: 100%;
+  }
+
+  .contact_us .textinput {
+    width: 100%;
+  }
+
+  .contact_us .container-block.form-wrapper {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .contact_us .text-blk.input-title {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .contact_us .container-block.form-wrapper {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 80px;
+    margin-left: 0px;
+  }
+
+  .contact_us .text-blk.contact-subhead {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact_us .container-block.form-wrapper {
+    padding-top: 50px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+  }
+
+  .contact_us .container-block.form-wrapper {
+    margin-top: 60px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+  }
+
+  .contact_us .responsive-container-block {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 35px;
+    margin-left: 0px;
+  }
+
+  .contact_us .text-blk.input-title {
+    font-size: 12px;
+  }
+
+  .contact_us .responsive-container-block.container {
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+  }
+
+  .contact_us .container-block.form-wrapper {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-bottom: 80px;
+    margin-left: 0px;
+  }
+
+  .contact_us .form-box {
+    padding-top: 50px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .contact_us .text-blk.contact-head {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .contact_us .text-blk.contact-subhead {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contact_us .text-blk.input-title {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+
+  .contact_us .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6 {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 35px;
+    margin-left: 0px;
+  }
+
+  .contact_us .input {
+    height: 40px;
+  }
+
+  .contact_us .text-blk.contact-head {
+    font-size: 26px;
+    line-height: 35px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+}
+        header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+header nav{
+    float: right;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: grey;
+    text-decoration: none;
+    display: block;
+}
+header nav ul il a:hover
+header nav ul il a:active
+{
+    color: blue;
+    background: #2196f3;
+}
+.menu-toggle{
+    color: black;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 99px)
+{
+    header{
+        padding: 0 20px;
+
+    }
+    .menu-toggle{
+        display: block;
+    }
+    header nav{
+       
+       position: absolute;
+       width: 100%;
+       height: (100vh-50px);
+       background: #333;
+       top: 50px;
+       left: -100;
+       transition: 0.5s;
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav ul{
+        display: block;
+        text-align: center;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        border-bottom: 1px solid rgb(0,0,0,0.2);
+    }
+}
+header {
+    /* Your existing styles */
+}
+
+/* Other CSS styles */
+
+@media (max-width: 99px) {
+    header {
+        /* Your existing styles */
+    }
+    .menu-toggle {
+        /* Your existing styles */
+    }
+    header nav {
+        /* Your existing styles */
+    }
+    header nav.active {
+        /* Your existing styles */
+    }
+    header nav ul {
+        /* Your existing styles */
+    }
+    header nav ul li a {
+        /* Your existing styles */
+    }
+}
+.footer {
+            background-color: rgb(31, 29, 29);
+            padding: 80px 0;
+        }
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #d3d3d3;
+            text-decoration: none;
+            font-weight: 300;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50px;
+            color: blue;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+        @media (max-width: 757px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 574px) {
+            .footer-col{
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .footer-col li{
+            list-style: none;
+        }
+        .footer-col li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col h1{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-top: 63px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .text-mid{
+            text-align: right;
+            margin-bottom: 20px; /* Adjust this margin */
+            margin-right: 81px;
+            margin-top: 40px; /* Adjust this margin */
+        }
+        h2{
+            font-weight: 600;
+            text-transform: capitalize;
+            line-height: 23px;
+            margin-left: 0;
+            margin-bottom: -35;
+        }
+</style>
+
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><img src="2D on transparent background.png" width="125"></a></span>
+
+            <div class="menu">
+                <div class="logo-toggle"><img src="2D on transparent background.png" width="125">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="jobseekers.html">Job Seeker</a></li>
+                  <li><a href="employer.html">Recruitment</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   
+    <div class="contact_us">
+     <div class="responsive-container-block container">
+       <form action="https://formsubmit.co/cvs@zianagency.co.ke" method="post" class="form-box">
+        <br><br><br><br> <br>
+         <p class="text-blk contact-head">
+           Get in touch
+         </p>
+         <p class="text-blk contact-subhead">
+           Feel free to reach out to us! We'd love to hear from you and assist you on your journey. Get in touch today for personalized support and expert guidance
+         </p>
+         <div class="container-block form-wrapper">
+           <div class="responsive-container-block">
+             <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt-4">
+               <p class="text-blk input-title">
+                 First Name
+               </p>
+               <input class="input" id="ijowk-4" name="FirstName">
+             </div>
+             <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+               <p class="text-blk input-title">
+                 Last Name
+               </p>
+               <input class="input" id="indfi-3" name="Last Name">
+             </div>
+             <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+               <p class="text-blk input-title">
+                 Email
+               </p>
+               <input class="input" id="ipmgh-4" name="Email">
+             </div>
+             <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+               <p class="text-blk input-title">
+                 Phone No.
+               </p>
+               <input class="input" id="imgis-4" name="PhoneNumber">
+             </div>
+             <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-4">
+               <p class="text-blk input-title">
+                 Message
+               </p>
+               <textarea class="textinput" id="i5vyy-4" placeholder="Write your message..."></textarea>
+             </div>
+           </div>
+           <button class="submit-btn">
+             Send Message
+           </button>
+         </div>
+       </form>
+     </div>
+   </div>
+   
+   <footer class="footer">
+     <div class="container">
+         <div class="row">
+             <div class="footer-col">
+                 <h4>Company</h4>
+                 <ul>
+                     <li><a href="">About Us</a></li>
+                     <li><a href="">Career</a></li>
+                     <li><a href="">Privacy</a></li>
+                     <li><a href="">Affiliate</a></li>
+                     <li><a href="">Contact</a></li>
+                     <li><a href="">Contract</a></li>
+                 </ul>
+             </div>
+             <div class="footer-col">
+                 <h4>Popular Jobs</h4>
+                 <ul>
+                     <li><a href="">Accountants</a></li>
+                     <li><a href="">Hospitality</a></li>
+                     <li><a href="">Managers</a></li>
+                     <li><a href="">Security Guards</a></li>
+                     <li><a href="">Drivers</a></li>
+                     <li><a href="">Airport Attendants</a></li>
+                 </ul>
+             </div>
+             <div class="footer-col">
+                 <h4>Our Location</h4>
+                 <ul>
+                     <li><a href="">Mombasa</a></li>
+                     <li><a href="">Nyali</a></li>
+                 </ul>
+             </div>
+             <div class="footer-col">
+                 <h4>Connect With Us</h4>
+                 <p>0716078596</p><br>
+                 <p>zianagency@gmail.com</p>
+                 <div class="social-links">
+                     <a href="https://www.facebook.com/profile.php?id=100094303042295"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://wa.me/+254716078596"><i class="fab fa-whatsapp"></i></a>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="text-mid">
+         Join us today
+         <ul>
+             <li><img src="2D on transparent background.png" width="140" alt="Logo"></li>
+         </ul>
+     </div>
+   </footer>
+   
+   
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+     <script type="text/javascript">
+       $(document).ready(function() {
+         $('.menu-toggle').click(function(){
+           $('nav').toggleClass('active');
+         });
+       });
+     </script>
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+</script>
+
+</body>
+</html>

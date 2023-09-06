@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+     <title>Responsive Navigation Menu Bar</title>
+</head>
+<style>
+    #header {
+      width: 100%;
+      height: 100vh;
+      background-image: url(confrence\ room\ 2.jpg);
+      background-size: cover;
+      background-position: center;
+      padding-top: 70px; /* Add padding to make space for the fixed menu bar */
+      box-sizing: border-box; /* Include padding in the height calculation */
+    }
+
+    .header-text h1{
+      color: ;
+    }
+    .header-text p {
+      color: white; /* Set text color to white */
+    }
+    #services {
+    padding: 30px 0;
+  }
+  
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+  }
+  .services-list div{
+  background-color: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+  }
+  .services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .services-list div:hover{
+    background-color: blue;
+    transform: translateY(-10px);
+  }
+  <!-- portfolio --*/
+   #portfolio{
+    padding: 50px 0;
+   }
+   .work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+   }
+   .work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+   }
+   .work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+   }
+   .layer {
+    width: 100%;
+    height: 0;
+    background-color: linear-gradient(rgba(0,0,0,0.6), blue);
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 10px;
+    transition: 0.5s;
+  }
+  .layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .layer a{
+    margin-top: 20px;
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  .work:hover img{
+    transform: scale(1.1);
+  }
+  .work:hover .layer{
+    height: 100%;
+  }
+  .btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid blue;
+    padding:  14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transform: background 0.5s;
+  }
+  .btn:hover{
+    background-color: blue;
+  }
+  #services .services-list div p {
+      color: white;}
+      /* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #000428, #004683);
+    animation: background-color 20s;
+    min-height: 100vh;
+}
+
+@keyframes background-color {
+    0% {
+        background: linear-gradient(to bottom, #000428, #004683);
+    }
+
+    25% {
+        background: linear-gradient(135deg, #1a4223, #5ee95e);
+    }
+
+    50% {
+        background: linear-gradient(to bottom, #421a31, #e95ed2);
+    }
+
+    100% {
+        background: linear-gradient(-135deg, #fae37d, #881da8, #20668f);
+    }
+
+}
+
+.container {
+    margin-top: 80px;
+}
+
+.container .col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+}
+
+.card .face {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    /* border-right: 1px solid #999;
+border-bottom: 1px solid #999; */
+}
+
+.card .face.front-face,
+.card .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .face.front-face .name {
+    letter-spacing: 2px;
+}
+
+.card .face.front-face .designation {
+    font-size: 0.8rem;
+    color: #ddd;
+    letter-spacing: 0.8px;
+}
+
+.card:hover .face.front-face {
+    transform: rotateY(180deg);
+}
+
+.card .face.back-face {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.06);
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.card .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.2rem;
+}
+
+.card .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+}
+
+.card:hover .face.back-face {
+    transform: rotateY(360deg);
+}
+
+@media(max-width: 991.5px) {
+    .col-lg-4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+.footer {
+            background-color: rgb(31, 29, 29);
+            padding: 80px 0;
+        }
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #d3d3d3;
+            text-decoration: none;
+            font-weight: 300;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50px;
+            color: blue;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+        @media (max-width: 757px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 574px) {
+            .footer-col{
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .footer-col li{
+            list-style: none;
+        }
+        .footer-col li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col h1{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-top: 63px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .text-mid{
+            text-align: right;
+            margin-bottom: 20px; /* Adjust this margin */
+            margin-right: 81px;
+            margin-top: 40px; /* Adjust this margin */
+        }
+        h2{
+            font-weight: 600;
+            text-transform: capitalize;
+            line-height: 23px;
+            margin-left: 0;
+            margin-bottom: -35;
+        }
+        .header-text {
+  margin: 0;
+  padding: 50px; /* Adjust the padding as needed */
+  text-align: left; /* Center the text horizontally */
+}
+
+.header-text h1 {
+  color: white;
+  margin-bottom: 20px; /* Add some margin below the heading */
+}
+
+.header-text p {
+  color: white;
+  font-size: 16px; /* Increase font size for better readability */
+  line-height: 1.5; /* Add line height for better spacing */
+}
+
+  /* You may need to adjust other elements' margins or paddings in your layout */
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+    @media screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+  body {
+    font-size: 0.9rem;
+   
+}
+header {
+    font-size: 0.9rem;
+}
+section {
+    font-size: 0.9em;
+    text-align: justify;
+}
+footer {
+    font-size: 0.9rem;
+}
+
+  </style>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><img src="2D on transparent background.png" width="125"></a></span>
+
+            <div class="menu">
+                <div class="logo-toggle"><img src="2D on transparent background.png" width="125">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="jobseekers.html">Job Seeker</a></li>
+                    <li><a href="employer.html">Recruitment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+
+
+
+    <div class="header-text">
+       <br> 
+        <h1>Human Resource Services</h1>
+        <p>Zian Recruitment Agency offers top-notch Human Resource Services, tailored to meet your specific job recruitment needs. <br> Our dedicated team of HR experts excels in identifying and selecting exceptional candidates for a wide range of job positions. Whether you're seeking skilled professionals or entry-level talent, our comprehensive HR solutions ensure a seamless recruitment process. We pride ourselves on fostering lasting employer-employee relationships, ensuring your organization's success and growth. With Zian Recruitment Agency, finding the perfect match for your job vacancies has never been easier. Trust us for unparalleled HR Services that transform your hiring experience.</p>
+    </div>
+    
+       <a href="mailto:zianagency@email.com" class="btn">Employer</a>
+    </div>
+  </div>
+  <div id="services">
+  <div class="container">
+      <h1 class="sub-title">Our <br> Services</h1>
+      <div class="services-list">
+          <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>
+                  COMPANY <br><br> VISION</h2>
+              <p>
+
+                 
+                  
+                  Zian Recruitment and Consultancy Agency Limited aims at elimination of poverty by reducing unemployment rates through individual and corporate responsibilities and utilizing the locally and internationally available resources/opportunities. The company looks forward to becoming the river between the job seekers and the employers in Kenya and beyond</p>
+         
+          </div>
+          <div>
+              <i class="fa-thin fa-crop"></i>
+              <h2>
+                  COMPANY <br><br> MISSION</h2>
+              <p>
+                  The company promotes sustainable environmentally sound and cost effective practices in managing job allocations as a resource and connecting job seekers with employers, innovating technology, customer services consultancy and education. Zian Recruitment and Consultancy Agency Limited aims at improving employability rates globally and locally for the economic benefits of the community. The company can also generate tax revenue while fully operating.</p>
+         
+          </div>
+          <div>
+              <i class="fa-brands fa-adn"></i>
+              <h2>
+                  OUR GOAL</h2>
+              <p>
+                  We match qualified candidates with international companies looking to fill work positions</p>
+         
+          </div>
+      </div>
+  </div> <br>
+</div>
+</div>
+
+  <!--testimonial-->
+  <div class="container">
+    <h2>TESTIMONIALS</h2>
+    <br>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="face front-face">
+                    <img src="passport  photo.jpg"
+                        alt="" class="profile">
+                    <div class="pt-3 text-uppercase name">
+                        Mary Koech
+                    </div>
+                    <div class="designation">University Of Nairobi Graduate</div>
+                </div>
+                <div class="face back-face">
+                    <span class="fas fa-quote-left"></span>
+                    <div class="testimonial">
+                      "Zian Agency turned my aspirations into reality. Their personalized approach ensured my skills aligned with the perfect job match. Their visa assistance made my international dream a breeze. Thanks to their support, I'm pursuing a brighter future."
+                    </div>
+                    <span class="fas fa-quote-right"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="face front-face">
+                    <img src="passport  photo 2.jpg"
+                        alt="" class="profile">
+                    <div class="pt-3 text-uppercase name">
+                        Jeffery Kennan
+                    </div>
+                    <div class="designation">Full Stack Developer</div>
+                </div>
+                <div class="face back-face">
+                    <span class="fas fa-quote-left"></span>
+                    <div class="testimonial">
+                      "Zian Agency is a game-changer. Their mentors offered insightful guidance, helping me excel in my career. Their visa assistance made my transition seamless. With their support, I'm confidently stepping into a world of new opportunities."
+                    </div>
+                    <span class="fas fa-quote-right"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="face front-face">
+                    <img src="passport  photo 3.jpg"
+                        alt="" class="profile">
+                    <div class="pt-3 text-uppercase name">
+                        Issac Maxwell
+                    </div>
+                    <div class="designation">Accountants Student</div>
+                </div>
+                <div class="face back-face">
+                    <span class="fas fa-quote-left"></span>
+                    <div class="testimonial">
+                      "Their commitment to my success was evident in every step. The mentors offered insightful career advice, while their visa support facilitated my move. Grateful for a partnership that truly cares."
+                    </div>
+                    <span class="fas fa-quote-right"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+<!-------footer----->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Career</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Affiliate</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Contract</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Popular Jobs</h4>
+                <ul>
+                    <li><a href="">Accountants</a></li>
+                    <li><a href="">Hospitality</a></li>
+                    <li><a href="">Managers</a></li>
+                    <li><a href="">Security Guards</a></li>
+                    <li><a href="">Drivers</a></li>
+                    <li><a href="">Airport Attendants</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Location</h4>
+                <ul>
+                    <li><a href="">Mombasa</a></li>
+                    <li><a href="">Nyali</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <p>0716078596</p><br>
+                <p>zianagency@gmail.com</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100094303042295"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/+254716078596"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-mid">
+        Join us today
+        <ul>
+            <li><img src="2D on transparent background.png" width="140" alt="Logo"></li>
+        </ul>
+    </div>
+  </footer>
+
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+     <title>Responsive Navigation Menu Bar</title>
+</head>
+<style>
+
+
+    
+/* ******************************************************
+	Author URI: https://codeconvey.com/
+	Demo Purpose Only - May not require to add.
+	font-family: "Raleway",sans-serif;
+*********************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900');
+
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+article, header, section, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+body {
+    background: #4AC29A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BDFFF3, #4AC29A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #222;
+    font-size: 100%;
+    line-height: 24px;
+    margin: 0;
+	padding:0;
+	font-family: "Raleway",sans-serif;
+}
+a{
+	font-family: "Raleway",sans-serif;
+	text-decoration: none;
+	outline: none;
+}
+a:hover, a:focus {
+	color: #373e18;
+}
+section {
+    float: left;
+    width: 100%;
+	padding-bottom:3em;
+}
+h2 {
+    color: #1a0e0e;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    line-height: normal;
+	text-transform:uppercase;
+}
+h2 span {
+    display: block;
+    padding: 0;
+    font-size: 18px;
+    opacity: 0.7;
+    margin-top: 5px;
+	text-transform:uppercase;
+}
+
+#float-right{
+	float:right;	
+}
+
+/* ******************************************************
+	Script Top
+*********************************************************/
+
+.ScriptTop {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    font-size: 0.69em;
+    font-weight: 600;
+    line-height: 2.2;
+    padding: 12px 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* To Navigation Style 1*/
+.ScriptTop ul {
+    margin: 24px 0;
+    padding: 0;
+    text-align: left;
+}
+.ScriptTop li{
+	list-style:none;	
+	display:inline-block;
+}
+.ScriptTop li a {
+    background: #6a4aed none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.ScriptTop li a:hover{
+	background:#000;
+	color:#fff;
+}
+
+
+/* ******************************************************
+	Script Header
+*********************************************************/
+
+.ScriptHeader {
+    float: left;
+    width: 100%;
+    padding: 2em 0;
+}
+.rt-heading {
+    margin: 0 auto;
+	text-align:center;
+}
+.Scriptcontent{
+	line-height:28px;	
+}
+.ScriptHeader h1{
+	font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+    color: #6a4aed;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    line-height: normal;
+
+}
+.ScriptHeader h2 {
+    color: #312c8f;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0 0;
+    line-height: normal;
+
+}
+.ScriptHeader h1 span {
+    display: block;
+    padding: 0;
+    font-size: 22px;
+    opacity: 0.7;
+    margin-top: 5px;
+
+}
+.ScriptHeader span {
+    display: block;
+    padding: 0;
+    font-size: 22px;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+
+
+
+/* ******************************************************
+	Live Demo
+*********************************************************/
+
+
+
+
+
+/* ******************************************************
+	Responsive Grids
+*********************************************************/
+
+
+
+.rt-container {
+	margin: 0 auto;
+	padding-left:12px;
+	padding-right:12px;
+}
+.rt-row:before, .rt-row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.rt-row:after {
+  clear: both;
+}
+[class^="col-rt-"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+}
+
+
+@media (min-width: 768px) {
+  .rt-container {
+    width: 750px;
+  }
+  [class^="col-rt-"] {
+    float: left;
+    width: 49.9999999999%;
+  }
+  .col-rt-6, .col-rt-12 {
+    width: 100%;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+	.rt-container {
+		width: 1170px;
+	}
+	.col-rt-1 {
+		width:16.6%;
+	}
+	.col-rt-2 {
+		width:30.33%;
+	}
+	.col-rt-3 {
+		width:50%;
+	}
+	.col-rt-4 {
+		width: 67.664%;
+	}
+	.col-rt-5 {
+		width: 83.33%;
+	}
+	
+
+}
+
+@media only screen and (min-width:240px) and (max-width: 768px){
+	 .ScriptTop h1, .ScriptTop ul {
+		text-align: center;
+	}
+	.ScriptTop h1{
+		margin-top:0;
+		margin-bottom:15px;
+	}
+	.ScriptTop ul{
+		 margin-top:12px;		
+	}
+	
+	.ScriptHeader h1,
+	.ScriptHeader h2, 
+	.scriptnav ul{
+		text-align:left;	
+	}
+	.scriptnav ul{
+		 margin-top:12px;		
+	}
+	#float-right{
+		float:none;	
+	}
+	
+}
+
+
+main {
+  width: 100%;
+  max-width: 720px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.toggle-el {
+  padding: 2rem;
+  height: 240px;
+  background: white;
+  transition: all 0.2s ease;
+  opacity: 1;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+input[type=checkbox].hide-input:checked + .toggle-el {
+  height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+input.hide-input {
+  position: absolute;
+  left: -999em;
+}
+
+label.toggle {
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  color: #242424;
+  background: #b5b5b5;
+  border-radius: 3px;
+  user-select: none;
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+  body {
+    font-size: 0.9rem;
+   
+}
+header {
+    font-size: 0.9rem;
+}
+section {
+    font-size: 0.9em;
+    text-align: justify;
+}
+footer {
+    font-size: 0.9rem;
+}
+
+
+</style>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><img src="2D on transparent background.png" width="125"></a></span>
+
+            <div class="menu">
+                <div class="logo-toggle"><img src="2D on transparent background.png" width="125">
+                    <span class="logo"><a href="#"></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="jobseekers.html">Job Seeker</a></li>
+                  <li><a href="employer.html">Recruitment</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    		
+<div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+
+            <!-- AD HERE -->
+            
+        </div>
+        <div class="col-rt-2">
+            <ul>
+                <br><br><br>
+                <li><a href="mailto:cvs@zianagency.co.ke" class="btn">Employer</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1> Large Scale Employment Assignments</h1>
+                <p>Large scale recruitment is becoming increasingly important for business start-ups, time sensitive projects or overseas outsourcing. East African individuals are highly educated and ready to travel to any areas which are safe but provide excellent working conditions and career growth.  We are the only team in East Africa which has the ability to undertake Executive Search roles, Middle Management and Junior positions.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+           <!-- START DEMO -->   
+<main>
+  <label for="item-3" class="toggle">Business <br>
+    Start Ups.</label>
+  <input type="checkbox" name="one" id="item-3" class="hide-input">
+  <div class="toggle-el">
+    <div>
+      <p>Concentrate on your core business by outsourcing all the recruitment requirements to Summit. </p>
+       
+
+    </div>
+  </div>
+  <br><br><h1>Large Project <br>
+    Teams.</h1>
+
+  <p> project may last 8 months or several years, but either way, we can advise accordingly and assist with all levels in the recruitment process. The Zian team has undertaken a variety of projects across business sectors, from Engineering, Construction of Renewable Energy sites to Hospitality, Manufacturing and many more.</p>
+  <br><h1>
+    International <br>
+Mass Recruitment.
+  </h1>
+  <br>
+  <p>Our international Mass Recruitment Specialists are conversant with local conditions outside of the African workplace and can source the talent and skills required, coupled with the ability to choose individuals who will fit into a foreign climate and culture. We have a large database of Talent and work closely with the relevant country Embassy to ensure we are up to date with requirements for African candidates wishing to work outside their home country.</p>
+  <br><br><h1>Extensive use <br>
+    International <br>
+    psychometric testing <br></h1>
+    <br><img src="brain.jpg" alt="">
+    <p>An international job recruitment agency makes extensive use of psychometric testing as a pivotal tool in their selection process. These assessments provide invaluable insights into candidates' cognitive abilities, personality traits, and behavioral tendencies. By conducting psychometric tests on a global scale, the agency ensures that candidates are not only highly skilled but also culturally compatible with employers across diverse regions. This rigorous approach to talent assessment enables the agency to consistently deliver exceptional candidates to international clients, fostering successful, long-term employment relationships.</p>
+
+    <br>
+    <p>Our international Mass Recruitment Specialists are conversant with local conditions outside of the African workplace and can source the talent and skills required, coupled with the ability to choose individuals who will fit into a foreign climate and culture. We have a large database of Talent and work closely with the relevant country Embassy to ensure we are up to date with requirements for African candidates wishing to work outside their home country.</p>
+    <br><br><h1>100,000 <br>
+      visits per week on <br>
+      the zian Agency Job
+      <br></h1>
+      <br><img src="VISIT.png" alt="">
+      <p>The Zian Agency Job platform consistently receives an impressive 100,000 weekly visits, a testament to its popularity and effectiveness in connecting job seekers with employment opportunities, making it a thriving hub for career seekers and employers alike.</p>
+
+
+
+
+  </main>
+                  <!-- END DEMO -->
+    		</div>
+		</div>
+    </div>
+</section>
+
+
+
+     
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+</script>
+
+</body>
+</html>
